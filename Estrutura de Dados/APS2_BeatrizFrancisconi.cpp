@@ -1,9 +1,9 @@
 /*
 Aluna: Beatriz de Carvalho Francisconi
-Matrícula: 20102624
-Construa um sistema para um hospital que está começando um programa de incentivo a doação de sangue, o objetivo do sistema é registrar e gerenciar informações dos doadores.
-O sistema terá as seguintes funções:
-- Registrar um novo doador com nome, cpf, idade e tipo sanguíneo.
+
+Construa um sistema para um hospital que estÃ¡ comeÃ§ando um programa de incentivo a doaÃ§Ã£o de sangue, o objetivo do sistema Ã© registrar e gerenciar informaÃ§Ãµes dos doadores.
+O sistema terÃ¡ as seguintes funÃ§Ãµes:
+- Registrar um novo doador com nome, cpf, idade e tipo sanguÃ­neo.
 - Editar algum registro.
 - Buscar um doador pelo CPF.
 - Listar todos os doadores. 
@@ -68,14 +68,14 @@ void telaCadastro(){
 					scanf("%s",&nome);
 					printf("\nDigite a idade do Doador:");
 					scanf("%d",&idade);
-					printf("\nDigite o tipo sanguíneo do Doador:", idade);	
+					printf("\nDigite o tipo sanguÃ­neo do Doador:", idade);	
 					scanf("%s",&tipo_sanguineo);
 					REG ListaCadastro = criaNovoDoador(cpf,idade,nome,tipo_sanguineo);						
 					doador = armazenaDoador(ListaCadastro, doador);
 					telaCadastro();
 					break;
 					}else{
-						printf("CPF já registrado.\n");
+						printf("CPF jÃ¡ registrado.\n");
 						system("pause");
 						break;
 					}
@@ -95,12 +95,12 @@ void buscarDoador(){
 	while(cpf != 0){
 	system("cls");
 			if(valorExiste == NULL){
-				printf("CPF não cadastrado.\n");
+				printf("CPF nÃ£o cadastrado.\n");
 				system("pause");
 				buscarDoador();
 			}else{	
-				printf(" -- Informações do Doador -- \n");								
-				printf("Memória: %p \n", valorExiste);
+				printf(" -- InformaÃ§Ãµes do Doador -- \n");								
+				printf("MemÃ³ria: %p \n", valorExiste);
 				printf("CPF: %d \n", cpf);
 			    printf("Nome: %s \n", valorExiste->nome);
 				printf("Idade: %d  \n", valorExiste->idade);
@@ -123,22 +123,22 @@ void editarDoador(){
 	while(cpf != 0){
 		system("cls");
 		if(valorExiste->cpf == NULL){
-		printf("CPF não cadastrado!\n");
+		printf("CPF nÃ£o cadastrado!\n");
 		//system("pause");
 		getchar();getchar();
 			}else{
-				printf(" -- Informações do Doador -- \n");				
-				printf("Mémoria: %p \n", valorExiste);
+				printf(" -- InformaÃ§Ãµes do Doador -- \n");				
+				printf("MÃ©moria: %p \n", valorExiste);
 				printf("CPF: %d \n", valorExiste->cpf);
 			    printf("Nome: %s  \n", valorExiste->nome);
 				printf("Idade: %d  \n", valorExiste->idade);
-				printf("Tipo Sanguíneo: %s  \n", valorExiste->tipo_sanguineo);
+				printf("Tipo SanguÃ­neo: %s  \n", valorExiste->tipo_sanguineo);
 				printf("\n\n -- Insira Novos Valores -- ");				
 				printf("\nNome:");
 				scanf("%s",&nome);
 				printf("\nIdade: ");
 				scanf("%d",&idade);
-				printf("\nTipo Sanguíneo: ");
+				printf("\nTipo SanguÃ­neo: ");
 				scanf("%s",&tipo_sanguineo);							
 				//system("pause");
 				while (doador != NULL){
@@ -162,7 +162,7 @@ void telaListar(REG Lista){
 				while (Lista != NULL)
 		    	{
 		    	printf("|||||||||||||||||||||||||\n|");
-		       	printf("Memória: %p \n", Lista);
+		       	printf("MemÃ³ria: %p \n", Lista);
 				printf("CPF: %d \n", Lista->cpf);
 			    printf("Nome: %s \n", Lista->nome);
 				printf("Idade: %d  \n", Lista->idade);
@@ -184,7 +184,7 @@ int main(){
 		printf("3 -  Alterar Doador \n");
 		printf("4 -  Ver Lista de Doadores \n");
 		printf("0 -  Sair\n");
-		printf("Selecione uma opção:");
+		printf("Selecione uma opÃ§Ã£o:");
 		scanf("%d",&opcao);
 		switch(opcao){
 			case 1:
